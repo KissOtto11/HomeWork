@@ -240,17 +240,24 @@ public class Test {
         }
 
         // cimkézett break
+        
+        // A break és a continue utasításokat használhatjuk címkével vagy anélkül. 
+        // A címke egy azonosító, ami az utasítás elõtt helyezkedik el. 
+        // A címkét egy kettõspont (:) követi. Egy példát a címke alkalmazására:
+        // search [címke]: ...for- ciklus... break [search]      
+
+        
         int[][] matrix = { { 32, 87, 3, 589 }, { 12, 1076, 2000, 8 },
                 { 622, 127, 77, 955 } };
         searchfor = 12;
         i = 0;
         int j = 0;
         foundIt = false;
-        search: for (; i < matrix.length; i++) {
+        search: for (; i < matrix.length; i++) {	// search õ a cimke
             for (j = 0; j < matrix[i].length; j++) {
                 if (matrix[i][j] == searchfor) {
                     foundIt = true;
-                    break search;
+                    break search;					// break cimke
                 }
             }
         }
@@ -268,7 +275,7 @@ public class Test {
         int numPs = 0;
         for (int p = 0; p < max; p++) {
             // interested only in p's
-            if (searchMe.charAt(p) != 'p')
+            if (searchMe.charAt(p) != 'p')	// ha nincs p -akkor continue azaz megy tovább
                 continue;
             // process p's
             numPs++;
