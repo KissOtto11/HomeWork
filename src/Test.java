@@ -303,6 +303,23 @@ public class Test {
         }
         System.out.println(foundIt ? "Found it" : "Didn't find it");
 
+       
+        
+        String str = null;
+        try {
+        	System.out.print(str.length());
+        	System.out.print("");
+        }catch (NullPointerException e) {
+        	System.out.print(e.getLocalizedMessage());
+        }finally{
+        	
+        }
+        
+        
+        
+        
+        
+        
         // TÖMBÖK
         int[] anArray;
         anArray = new int[10];
@@ -343,6 +360,14 @@ public class Test {
         char[] copyTo = new char[7];
         System.arraycopy(copyFrom, 2, copyTo, 0, 7);
         System.out.println(new String(copyTo));
+
+        final int LENGTH_CONSTANS = 7;
+        char[] copyFrom2 = { 'd', 'e', 'c', 'a', 'f', 'f', 'e', 'i', 'n', 'a',
+                't', 'e', 'd' };
+        char[] copyTo2 = new char[LENGTH_CONSTANS];
+        System.arraycopy(copyFrom2, 2, copyTo, 0, LENGTH_CONSTANS);
+        System.out.println(new String(copyTo2));
+    
     }
 }
 
